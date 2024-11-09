@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:training/constants/constants.dart';
+import 'package:training/screens/activity_screen.dart';
 import 'package:training/widgets/home_screen_body.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -60,7 +61,9 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, ActivityScreen.routeName);
+              },
               icon: const Padding(
                 padding: EdgeInsets.only(right: 10.0),
                 child: Icon(
