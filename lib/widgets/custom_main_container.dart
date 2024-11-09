@@ -18,8 +18,8 @@ class CustomMainContainer extends StatelessWidget {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    Colors.black,
-                    Colors.amber,
+                    kSecondaryColor,
+                    kPrimaryColor,
                   ])),
           child: const Padding(
             padding: EdgeInsets.all(8.0),

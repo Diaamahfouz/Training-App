@@ -3,6 +3,7 @@ import 'package:training/widgets/custom_day_activity.dart';
 import 'package:training/widgets/custom_details.dart';
 import 'package:training/widgets/custom_main_container.dart';
 import 'package:training/widgets/custom_line.dart';
+import 'package:training/widgets/custom_offer.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
@@ -14,7 +15,7 @@ class HomeScreenBody extends StatelessWidget {
         vertical: 10.0,
         horizontal: 20,
       ),
-      child: Column(
+      child: ListView(
         children: [
           const CustomMainContainer(),
           const CustomLine(
@@ -23,9 +24,9 @@ class HomeScreenBody extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
             child: SizedBox(
-              height: 250,
+              height: 90,
               child: ListView(
-                scrollDirection: Axis.vertical,
+                scrollDirection: Axis.horizontal,
                 children: const [
                   CustomDetails(
                     word: 'Steps',
@@ -83,6 +84,40 @@ class HomeScreenBody extends StatelessWidget {
                   CustomDayActivity(
                     word: 'Fri',
                     num: '14',
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const CustomLine(
+            category: "Offers",
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            child: SizedBox(
+              height: 90,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  CustomOffer(
+                    word: '1 Months ',
+                    num: '15 exercise',
+                    Price: r'300 $',
+                  ),
+                  CustomOffer(
+                    word: '3 Months ',
+                    num: '45 exercise',
+                    Price: r'1000 $',
+                  ),
+                  CustomOffer(
+                    word: '6 Months ',
+                    num: '150 exercise',
+                    Price: r'1500 $',
+                  ),
+                  CustomOffer(
+                    word: '1 year ',
+                    num: '300 exercise',
+                    Price: r'2900 $',
                   ),
                 ],
               ),
